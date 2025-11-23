@@ -34,3 +34,5 @@ python-math
 Pillow
 speedtest-cli
 python-dotenv
+uvloop
+distutils
