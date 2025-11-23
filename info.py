@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
  # Bot information
 SESSION = environ.get('SESSION', 'Media_search') 
-API_ID = environ.get('API_ID', '')
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = environ.get('API_ID', '21419016')
+API_HASH = environ.get('API_HASH', '79198e1eb4cfd0f771a89d83b9144e7e')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8584023542:AAERJAAWB7KhuG-sbEzPQ_SzNZLUxtfg47s')
 
 # Bot settings 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300)) 
@@ -24,28 +24,28 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/7e56d907542396289fee4.jpg h
 STICKER = (environ.get('STICKER', 'CAACAgUAAxkBAAICvGaPiyq4I6jTHnbzuo4Rhexe9OvlAAIYBwACKbNpV74eKo96UA6gHgQ')).split() 
 
 # Admins, Channels & Users 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7188908429').split()] 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()] 
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1933114137').split()] 
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002580746176').split()] 
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()] 
 AUTH_USERS = (auth_users + ADMINS) if auth_users else [] 
 auth_grp = environ.get('AUTH_GROUP') 
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information 
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://melodysotto4_db_user:BCUKIKDEAqFEzeCj@cluster0.trrt89o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "mazhavil")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files') 
 
 # FSUB 
-auth_channel = environ.get('AUTH_CHANNEL' "")
+auth_channel = environ.get('AUTH_CHANNEL' "-1002580746176 -1002535364932")
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None 
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID 
 REQ_CHANNEL = environ.get("REQ_CHANNEL", False) 
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI) 
 
 # Others 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1002190351641")) 
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria') 
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1003304589576")) 
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Mazhavil_bots') 
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True) 
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")),True)
